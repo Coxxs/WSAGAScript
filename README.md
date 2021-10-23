@@ -82,7 +82,7 @@ Open powershell as admin and run ```Add-AppxPackage -Register path-to-extracted-
 
 WSA will install with gapps
 
-# Enable root permission
+# Enable root access
 
 Root and `setenforcing 0` are no longer required for login in gapps now (fix added in apply.sh)
 
