@@ -84,7 +84,9 @@ WSA will install with gapps
 
 # Enable root permission
 
-Root and boot are no longer required for login in gapps now (fix added in apply.sh)
+Root and `setenforcing 0` are no longer required for login in gapps now (fix added in apply.sh)
+
+You can still get root access with following steps
 
 ## (ADB SHELL ROOT WITH su)
 Copy the kernel file from this repo and replace the kernel file inside the Tools folder of your extracted msix (make sure WSA is not running)
