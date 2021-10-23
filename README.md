@@ -5,7 +5,6 @@
 # As a temporary measure I made a tutorial
 [![How to install Google Apps (Play Store) on WSA (Windows Subsystem Android)](http://img.youtube.com/vi/rIt00xDp0tM/0.jpg)](http://www.youtube.com/watch?v=rIt00xDp0tM "How to install Google Apps (Play Store) on WSA (Windows Subsystem Android)")
 
-## SIGN IN DOESN'T WORK CURRENTLY. (Unless you use the fix at the bottom)
 ### THIS IS FOR TESTING
 
 ### Download msixbundle (~1.2GB)
@@ -83,7 +82,10 @@ Open powershell as admin and run ```Add-AppxPackage -Register path-to-extracted-
 
 WSA will install with gapps
 
-# WORKAROUND FOR SIGN IN ISSUE:
+# Enable root permission
+
+Root and boot are no longer required for login in gapps now (fix added in apply.sh)
+
 ## (ADB SHELL ROOT WITH su)
 Copy the kernel file from this repo and replace the kernel file inside the Tools folder of your extracted msix (make sure WSA is not running)
 
@@ -92,6 +94,5 @@ This will allow you use use su inside adb shell
 Enter adb shell and run
 ```
 su
-setenforce 0
 ```
-You can now sign in
+You are now root!
